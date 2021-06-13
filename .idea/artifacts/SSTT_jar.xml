@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SSTT:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SSTT_jar</output-path>
+    <root id="archive" name="SSTT.jar">
+      <element id="module-output" name="SSTT" />
+    </root>
+  </artifact>
+</component>
