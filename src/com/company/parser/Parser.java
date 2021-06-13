@@ -22,15 +22,15 @@ public class Parser {
         Statistics stat = new Statistics(fileName);
         BufferedReader reader = new BufferedReader( new FileReader (fileName));
         String line;
-        int ws; //начало слова
+        int wordStart; //начало слова
         while ((line = reader.readLine()) != null) {
-            ws=0;
+            wordStart=0;
             for(int i = 0; i < line.length(); i++) {
                 if(isSeparator(line.charAt(i))) {
-                    if(ws!=i) {
-                        stat.addWord(line.substring(ws,i)); //добавление слова в статистику
+                    if(wordStart!=i) {
+                        stat.addWord(line.substring(wordStart,i)); //добавление слова в статистику
                     }
-                    ws=i+1;
+                    wordStart=i+1;
                 }
             }
         }
